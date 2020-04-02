@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Allyson's Story Maker</title>
+
+
+</head>
+
+<body>
+
+    <h1> Story Maker </h1>
+
+	<p>Noun: <input type="text" name="hours" id="noun"></p>
+    <p>Adjective: <input type="text" name="hours" id="adjective"></p>
+    <p>Someone's Name: <input type="text" name="hours" id="name"></p>
+    <p>
+    <button id="story">Make Story</button>
+	</p>
+
+
+<div id="result"></div>
+
+<script type="text/javascript">
+
+
+// save the button id to a variable
+// then call the generate function when the button is clicked
+var btn = document.getElementById('story');
+btn.onclick = generate;
+
+
+// function to retrieve form input and calculate pay
+function generate() {
+	 var noun = document.getElementById('noun').value;
+	 var adjective = document.getElementById('adjective').value;
+     var name = document.getElementById('name').value;
+	  
+	 
+	 resultBox = document.getElementById('result');
+	 resultBox.innerHTML = "<p>" + name + " likes a " + adjective + " " + noun + "</p>";
+	 
+	
+} // end generate()
+
+
+</script>
+</body>
+</html>
